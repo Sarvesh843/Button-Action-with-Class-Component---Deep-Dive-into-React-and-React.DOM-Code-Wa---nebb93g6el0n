@@ -1,20 +1,20 @@
-import React, {Component, useState} from "react";
-import '../styles/App.css';
-
-class App extends Component {
-    constructor(props) {
-		super(props);
-	};
-
-    render() {
-    	return(
-    		<div id="main">
-				{ /* Do not remove this main div!! */ }
-    		</div>
-    	);
-    }
-}
-
-
-export default App;
-
+function App() {
+	let [ele, setFlag] = useState("");
+	
+	function change(){
+	  //setFlag(true);
+	  setFlag(<p id="para">Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>)
+	}
+	return (
+	  <>
+	  <div id="main">
+		// Do not alter the main div
+	  </div>
+	  {ele}
+	  {/* <p id="para" className={flag ? "sho" : "hide"}>Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p> */}
+	  <button id="click" onClick={change}>show</button>
+	  </>
+	);
+  }
+  
+  export default App;
